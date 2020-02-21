@@ -1,29 +1,26 @@
 import React from 'react';
-import { Card, Button, CardHeader, CardFooter, CardBody,
+import { Card, CardHeader, CardBody,
     CardTitle, CardText } from 'reactstrap';
-  
+import styled from 'styled-components';
+ 
+const Cardstyle= styled(Card)`
+display: flex;
+
+width: 25rem;
+
+
+` 
   const Charcard = (props) => {
     return (
       <div>
-        <Card>
-          <CardHeader>Header</CardHeader>
+        <Cardstyle>
+          <CardHeader> Name: {props.name}</CardHeader>
           <CardBody>
-            <CardTitle>Special Title Treatment</CardTitle>
-            <CardText>With supporting text below as a natural lead-in to additional content.</CardText>
-            <Button>Go somewhere</Button>
+            <CardTitle>Gender: {props.gender}</CardTitle>
+    <CardText>Height (cm): {props.height}</CardText>
           </CardBody>
-          <CardFooter>Footer</CardFooter>
-        </Card>
+        </Cardstyle>
   
-        <Card>
-          <CardHeader tag="h3">Featured</CardHeader>
-          <CardBody>
-            <CardTitle>Special Title Treatment</CardTitle>
-            <CardText>With supporting text below as a natural lead-in to additional content.</CardText>
-            <Button>Go somewhere</Button>
-          </CardBody>
-          <CardFooter className="text-muted">Footer</CardFooter>
-        </Card>
       </div>
     );
   };

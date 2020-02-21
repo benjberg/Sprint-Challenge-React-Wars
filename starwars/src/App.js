@@ -1,7 +1,6 @@
 import React from 'react';
 import './App.css';
-import Charcard from './components/Charcard';
-import Parent from './components/Parent';
+ import Parent from './components/Parent';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 const App = () => {
@@ -15,7 +14,7 @@ const App = () => {
   return (
     <div className="App">
       <h1 className="Header">React Wars</h1>
-    <Parent/>
+    <Parent/> 
     </div>
     
       
