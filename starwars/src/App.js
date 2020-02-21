@@ -1,5 +1,12 @@
 import React from 'react';
 import './App.css';
+ import Parent from './components/Parent';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import styled from 'styled-components';
+
+const HeaderFont = styled.img`
+margin: 1rem 0;
+`
 
 const App = () => {
   // Try to think through what state you'll need for this app before starting. Then build out
@@ -11,8 +18,12 @@ const App = () => {
 
   return (
     <div className="App">
-      <h1 className="Header">React Wars</h1>
+  <HeaderFont className='Font' src="https://fontmeme.com/permalink/200221/9011541cda3c80fe53fc2403b9a5a36c.png" alt="star-wars-font" border="0"/>
+    <Parent/> 
     </div>
+    
+      
+    
   );
 }
 
