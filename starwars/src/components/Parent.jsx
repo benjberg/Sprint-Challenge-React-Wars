@@ -1,6 +1,12 @@
 import React, { useState,useEffect} from 'react';
 import Charcard from './Charcard';
 import axios from 'axios';
+import styled from 'styled-components';
+
+const Cdiv= styled.div`
+opacity: .4;
+`
+
 const Parent = (props) =>{
 const [data,setData]= useState([])
 useEffect(()=>{
@@ -9,13 +15,13 @@ useEffect(()=>{
         setData(response.data.results)
     })
 },[]); return(
-    <div className='cardDiv'>
+    <Cdiv>
         {data.map(data =>{
             return(<Charcard  key={data.url} name={data.name} height={data.height} gender={data.gender}/> )
         })}
 
 
-    </div>
+    </Cdiv>
 )
 }
 

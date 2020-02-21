@@ -1,27 +1,32 @@
 import React from 'react';
-import { Card, CardHeader, CardBody,
-    CardTitle, CardText } from 'reactstrap';
+import {
+    Card,  CardTitle, CardText, 
+    CardSubtitle, CardBody
+  } from 'reactstrap';
 import styled from 'styled-components';
  
-const Cardstyle= styled(Card)`
-display: flex;
-
-width: 25rem;
-
-
-` 
-  const Charcard = (props) => {
-    return (
-      <div>
-        <Cardstyle>
-          <CardHeader> Name: {props.name}</CardHeader>
-          <CardBody>
-            <CardTitle>Gender: {props.gender}</CardTitle>
-    <CardText>Height (cm): {props.height}</CardText>
-          </CardBody>
-        </Cardstyle>
+ const Cardcont= styled(Card)`
+ margin: 0 auto;
   
-      </div>
+ width: 25rem;
+ ` 
+ const Cardstyle= styled(CardBody)`
+ font-weight: bold;
+ `
+ 
+const Charcard = (props) => {
+    return (
+      <Cardcont>
+        <Card>
+         
+          <Cardstyle>
+            <CardTitle>Name: {props.name}</CardTitle>
+            <CardSubtitle>Gender: {props.gender}</CardSubtitle>
+            <CardText>Height (cm): {props.height}</CardText>
+           
+          </Cardstyle>
+        </Card>
+       </Cardcont>
     );
   };
   
